@@ -29,7 +29,7 @@ func (User) TableName() string {
 	return "sys_user"
 }
 
-func (u *User) Create(bean model.Model) {
+func (u *User) Create(bean model.Model) error {
 
 	// 插入一条数据
 	result, err := global.DB.Exec("INSERT INTO weakpass (username) VALUES (?)", "John Doe")
@@ -38,4 +38,5 @@ func (u *User) Create(bean model.Model) {
 	}
 
 	global.LOG.Debug("", zap.Any("result", result))
+	return err
 }
