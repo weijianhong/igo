@@ -19,10 +19,10 @@ func main() {
 	initialize.DB()
 
 	//初始化 redis
-	initialize.Redis()
+	//initialize.Redis()
 
 	// 初始化 elasticsearch
-	initialize.ES()
+	//initialize.ES()
 
 	// 启动grpc服务
 	core.RunGrpcServer()

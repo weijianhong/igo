@@ -49,3 +49,13 @@
 [server]2024/02/27 - 15:35:05.260	[34minfo[0m	D:/src/igo/initialize/redis.go:44	redis init success 
 [server]2024/02/27 - 15:35:39.599	[34minfo[0m	D:/src/igo/initialize/router.go:62	router register success
 [server]2024/02/27 - 15:35:39.600	[34minfo[0m	D:/src/igo/core/server.go:69	server run success on 	{"address": ":8888"}
+[server]2024/02/27 - 15:53:47.815	[34minfo[0m	D:/src/igo/initialize/redis.go:42	redis connect ping response:	{"pong": "PONG"}
+[server]2024/02/27 - 15:53:47.821	[34minfo[0m	D:/src/igo/initialize/redis.go:44	redis init success 
+[server]2024/02/27 - 16:25:48.273	[34minfo[0m	D:/src/igo/initialize/redis.go:42	redis connect ping response:	{"pong": "PONG"}
+[server]2024/02/27 - 16:25:48.279	[34minfo[0m	D:/src/igo/initialize/redis.go:44	redis init success 
+[server]2024/02/27 - 16:26:20.688	[34minfo[0m	D:/src/igo/initialize/router.go:62	router register success
+[server]2024/02/27 - 16:26:20.697	[34minfo[0m	D:/src/igo/core/server.go:69	server run success on 	{"address": ":8888"}
+[server]2024/02/27 - 16:40:46.142	[34minfo[0m	D:/src/igo/core/server.go:77	Shutting down server...
+[server]2024/02/27 - 16:41:22.392	[34minfo[0m	D:/src/igo/initialize/router.go:68	router register success
+[server]2024/02/27 - 16:41:22.405	[34minfo[0m	D:/src/igo/core/server.go:69	server run success on 	{"address": ":8888"}
+[server]2024/02/27 - 16:41:51.437	[34minfo[0m	D:/src/igo/core/server.go:77	Shutting down server...
