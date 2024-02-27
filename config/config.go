@@ -8,6 +8,5 @@ type Server struct {
 	JWT     JWT           `mapstructure:"jwt" json:"jwt" yaml:"jwt"`
 	Es      ElasticSearch `mapstructure:"es" json:"es" yaml:"es"`
 	Captcha Captcha       `mapstructure:"captcha" json:"captcha" yaml:"captcha"`
-
-	//Cors CORS `mapstructure:"cors" json:"cors" yaml:"cors"`
+	Cors    CORS          `mapstructure:"cors" json:"cors" yaml:"cors"`
 }
