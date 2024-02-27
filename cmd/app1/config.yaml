@@ -1,0 +1,72 @@
+system:
+  env: local
+  server: # 不支持同时开启
+    http:
+      is-open: true
+      addr: "localhost"
+      port: 8888
+    grpc:
+      is-open: false
+      addr: "localhost"
+      port: 50051
+
+db:
+  driver-type: "mysql" # 支持 mysql mariadb 数据库
+  protocol: "tcp"
+  username: "root"
+  password: "TFSec@2017@MYSQL"
+  host: "localhost"
+  port: 3306
+  dbname: "gva"
+  conn-max-life-time: 10
+  comm-max-idle-time: 10
+  max-open-conns: 1000
+  max-idle-conns: 1000
+
+redis:
+  deployment: "standalone" #部署模式 单机standalone  主从replication 哨兵sentinel
+  addr: "localhost:6379"
+  password: ""
+  db: 0
+  master-name: "mymaster"
+  sentinel-addrs:
+    - "sentinel1:26379"
+    - "sentinel2:26379"
+    - "sentinel3:26379"
+
+elasticsearch:
+  addresses:
+    - "http://localhost:9200"
+    - "http://localhost1:9200"
+  username: "root "
+  password: "21111"
+
+captcha:
+  key-long: 6
+  img-width: 240
+  img-height: 80
+  open-captcha: 0
+  open-captcha-timeout: 3600
+
+jwt:
+  signing-key: 92c01272-b4cf-4a0b-8632-20bc9141154c
+  expires-time: 7d
+  buffer-time: 1d
+  issuer: qmPlus
+
+zap:
+  level: info
+  prefix: '[server]'
+  format: console
+  director: log
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  max-age: 0
+  show-line: true
+  log-in-console: true
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+[server]2024/02/27 - 14:50:01.364	[31merror[0m	D:/src/igo/initialize/redis.go:39	redis connect ping failed, err:	{"error": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+[server]2024/02/27 - 14:50:59.128	[31merror[0m	D:/src/igo/initialize/redis.go:39	redis connect ping failed, err:	{"error": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+[server]2024/02/27 - 15:32:38.741	[31merror[0m	D:/src/igo/initialize/elasticsearch.go:35	Error getting response: %s	{"error": "dial tcp [::1]:9200: connectex: No connection could be made because the target machine actively refused it."}
+[server]2024/02/27 - 15:33:36.052	[31merror[0m	D:/src/igo/initialize/elasticsearch.go:36	Error getting response: %s	{"error": "dial tcp [::1]:9200: connectex: No connection could be made because the target machine actively refused it."}
+[server]2024/02/27 - 15:35:39.596	[31merror[0m	D:/src/igo/initialize/elasticsearch.go:37	Failed to ping Elasticsearch	{"error": "failed to ping Elasticsearch after 3 attempts"}
