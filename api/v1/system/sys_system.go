@@ -8,5 +8,6 @@ import (
 type SystemApi struct{}
 
 func (s *SystemApi) GetSystemConfig(c *gin.Context) {
+	systemConfigService.AAA()
 	response.OkWithDetailed(nil, "获取成功", c)
 }
