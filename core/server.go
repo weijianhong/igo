@@ -17,40 +17,6 @@ import (
 	"time"
 )
 
-//
-//type server interface {
-//	ListenAndServe() error
-//}
-//
-//func RunHttpServer() {
-//	httpCfg := global.CONFIG.System.Server.HTTP
-//	if !httpCfg.IsOpen {
-//		return
-//	}
-//
-//	// 初始化路由
-//	Router := initialize.Routers()
-//
-//	address := fmt.Sprintf(":%d", httpCfg.Port)
-//	s := initServer(address, Router)
-//	// 保证文本顺序输出
-//	// In order to ensure that the text order output can be deleted
-//	time.Sleep(10 * time.Microsecond)
-//	global.LOG.Info("server run success on ", zap.String("address", address))
-//
-//	global.LOG.Error(s.ListenAndServe().Error())
-//}
-//
-//func initServer(address string, router *gin.Engine) server {
-//	return &http.Server{
-//		Addr:           address,
-//		Handler:        router,
-//		ReadTimeout:    20 * time.Second,
-//		WriteTimeout:   20 * time.Second,
-//		MaxHeaderBytes: 1 << 20,
-//	}
-//}
-
 func RunHttpServer() {
 	httpCfg := global.CONFIG.System.Server.HTTP
 	if !httpCfg.IsOpen {
