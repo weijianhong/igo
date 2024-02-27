@@ -22,5 +22,5 @@ var (
 
 	BlackCache local_cache.Cache
 
-	GVA_Concurrency_Control = &singleflight.Group{}
+	Concurrency_Control = &singleflight.Group{}
 )

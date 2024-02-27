@@ -1,8 +1,10 @@
 package system
 
 import (
+	"app/global"
 	"app/model"
 	"github.com/gofrs/uuid/v5"
+	"go.uber.org/zap"
 )
 
 type User struct {
@@ -25,4 +27,15 @@ type User struct {
 
 func (User) TableName() string {
 	return "sys_user"
+}
+
+func (u *User) Create(bean model.Model) {
+
+	// 插入一条数据
+	result, err := global.DB.Exec("INSERT INTO weakpass (username) VALUES (?)", "John Doe")
+	if err != nil {
+		global.LOG.Fatal("Error inserting data: ")
+	}
+
+	global.LOG.Debug("", zap.Any("result", result))
 }
