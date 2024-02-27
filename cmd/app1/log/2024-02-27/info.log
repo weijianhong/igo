@@ -68,3 +68,6 @@
 [server]2024/02/27 - 17:28:06.359	[34minfo[0m	D:/src/igo/initialize/router.go:69	router register success
 [server]2024/02/27 - 17:28:06.376	[34minfo[0m	D:/src/igo/core/server.go:69	server run success on 	{"address": ":8888"}
 [server]2024/02/27 - 17:28:10.640	[34minfo[0m	D:/src/igo/core/server.go:77	Shutting down server...
+[server]2024/02/27 - 17:38:30.971	[34minfo[0m	D:/src/igo/initialize/router.go:63	router register success
+[server]2024/02/27 - 17:38:30.981	[34minfo[0m	D:/src/igo/core/server.go:69	server run success on 	{"address": ":8888"}
+[server]2024/02/27 - 17:38:39.297	[34minfo[0m	D:/src/igo/core/server.go:77	Shutting down server...

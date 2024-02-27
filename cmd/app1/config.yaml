@@ -1,5 +1,6 @@
 system:
   env: local
+  router-prefix: ""
   server: # 不支持同时开启
     http:
       is-open: true
@@ -80,5 +81,7 @@ cors:
       allow-credentials: true
 
 
-
+local:
+  path: uploads/file
+  store-path: uploads/file
 

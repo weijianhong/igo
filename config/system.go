@@ -12,6 +12,7 @@ type Config struct {
 }
 
 type System struct {
-	Env    string       `mapstructure:"env" json:"env" yaml:"env"`
-	Server ServerConfig `mapstructure:"server" json:"server" yaml:"server"`
+	Env          string       `mapstructure:"env" json:"env" yaml:"env"`
+	Server       ServerConfig `mapstructure:"server" json:"server" yaml:"server"`
+	RouterPrefix string       `mapstructure:"router-prefix" json:"router-prefix" yaml:"router-prefix"`
 }

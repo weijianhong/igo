@@ -9,4 +9,5 @@ type Server struct {
 	Es      ElasticSearch `mapstructure:"es" json:"es" yaml:"es"`
 	Captcha Captcha       `mapstructure:"captcha" json:"captcha" yaml:"captcha"`
 	Cors    CORS          `mapstructure:"cors" json:"cors" yaml:"cors"`
+	Local   Local         `mapstructure:"local" json:"local" yaml:"local"`
 }
