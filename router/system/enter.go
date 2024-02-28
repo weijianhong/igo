@@ -11,7 +11,7 @@ var GroupNew = new(group)
 
 var (
 	//对硬接口
-	systemApi = v1.ApiGroupApp.ApiGroup.SystemApi
+	systemApi = v1.ApiGroupApp.ApiSystemGroup.SystemApi
 )
 
 func (a group) Add(Router *gin.RouterGroup) {
