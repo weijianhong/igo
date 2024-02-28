@@ -59,9 +59,11 @@ func (j *JWT) CreateTokenByOldToken(oldToken string, claims request.CustomClaims
 
 // 解析 token
 func (j *JWT) ParseToken(tokenString string) (*request.CustomClaims, error) {
-	token, err := jwt.ParseWithClaims(tokenString, &request.CustomClaims{}, func(token *jwt.Token) (i interface{}, e error) {
-		return j.SigningKey, nil
-	})
+	token, err := jwt.ParseWithClaims(tokenString, &request.CustomClaims{},
+		func(token *jwt.Token) (i interface{}, e error) {
+			return j.SigningKey, nil
+		})
+
 	if err != nil {
 		if ve, ok := err.(*jwt.ValidationError); ok {
 			if ve.Errors&jwt.ValidationErrorMalformed != 0 {
