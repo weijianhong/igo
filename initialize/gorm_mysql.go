@@ -1,10 +1,10 @@
 package initialize
 
 import (
-	"app/config"
-	"app/global"
-	"app/initialize/internal"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/weijianhong/igo/config"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/initialize/internal"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

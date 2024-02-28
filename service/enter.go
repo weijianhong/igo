@@ -1,6 +1,6 @@
 package service
 
-import "app/service/system"
+import "github.com/weijianhong/igo/service/system"
 
 type ServiceGroup struct {
 	SystemServiceGroup system.ServiceGroup

@@ -1,8 +1,8 @@
 package system
 
 import (
-	"app/model/common/response"
 	"github.com/gin-gonic/gin"
+	"github.com/weijianhong/igo/model/common/response"
 )
 
 type SystemApi struct{}

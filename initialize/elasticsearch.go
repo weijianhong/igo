@@ -1,8 +1,8 @@
 package initialize
 
 import (
-	"app/global"
 	"fmt"
+	"github.com/weijianhong/igo/global"
 	"sync"
 	"time"
 

@@ -1,7 +1,7 @@
 package router
 
 import (
-	"app/router/system"
+	"github.com/weijianhong/igo/router/system"
 )
 
 type RouterGroup struct {

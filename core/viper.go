@@ -1,11 +1,11 @@
 package core
 
 import (
-	"app/global"
 	"flag"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
+	"github.com/weijianhong/igo/global"
 	"sync"
 )
 

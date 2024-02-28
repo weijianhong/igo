@@ -1,7 +1,7 @@
 package system
 
 import (
-	"app/model"
+	"github.com/weijianhong/igo/model"
 )
 
 type JwtBlacklist struct {

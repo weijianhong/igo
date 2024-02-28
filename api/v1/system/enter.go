@@ -1,6 +1,6 @@
 package system
 
-import "app/service"
+import "github.com/weijianhong/igo/service"
 
 type ApiGroup struct {
 	SystemApi

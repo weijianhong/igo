@@ -1,9 +1,9 @@
 package system
 
 import (
-	"app/global"
-	"app/model"
 	"github.com/gofrs/uuid/v5"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/model"
 	"go.uber.org/zap"
 )
 

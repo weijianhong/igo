@@ -1,7 +1,7 @@
 package initialize
 
 import (
-	"app/global"
+	"github.com/weijianhong/igo/global"
 	"gorm.io/gorm"
 )
 

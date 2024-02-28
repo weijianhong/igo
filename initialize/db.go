@@ -1,10 +1,10 @@
 package initialize
 
 import (
-	"app/global"
 	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/weijianhong/igo/global"
 	"go.uber.org/zap"
 	"sync"
 	"time"

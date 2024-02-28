@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"app/config"
-	"app/global"
 	"github.com/gin-gonic/gin"
+	"github.com/weijianhong/igo/config"
+	"github.com/weijianhong/igo/global"
 	"net/http"
 )
 

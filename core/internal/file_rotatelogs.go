@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"app/global"
+	"github.com/weijianhong/igo/global"
 	"go.uber.org/zap/zapcore"
 	"os"
 )

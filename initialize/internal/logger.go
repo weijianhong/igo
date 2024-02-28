@@ -3,7 +3,7 @@ package internal
 import (
 	"fmt"
 
-	"app/global"
+	"github.com/weijianhong/igo/global"
 	"gorm.io/gorm/logger"
 )
 

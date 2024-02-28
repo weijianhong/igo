@@ -1,10 +1,10 @@
 package initialize
 
 import (
-	"app/config"
-	"app/global"
-	"app/initialize/internal"
 	"github.com/glebarez/sqlite"
+	"github.com/weijianhong/igo/config"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/initialize/internal"
 	"gorm.io/gorm"
 )
 

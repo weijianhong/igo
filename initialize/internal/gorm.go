@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"app/global"
+	"github.com/weijianhong/igo/global"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

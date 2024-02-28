@@ -1,11 +1,11 @@
 package core
 
 import (
-	"app/global"
-	"app/initialize"
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/initialize"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"

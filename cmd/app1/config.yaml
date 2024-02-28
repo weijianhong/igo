@@ -1,6 +1,7 @@
 system:
   env: local
   router-prefix: ""
+  db-type: "mysql" # 支持 mysql mariadb 数据库
   server: # 不支持同时开启
     http:
       is-open: true
@@ -23,9 +24,6 @@ db:
   comm-max-idle-time: 10
   max-open-conns: 1000
   max-idle-conns: 1000
-
-
-
 
 redis:
   deployment: "standalone" #部署模式 单机standalone  主从replication 哨兵sentinel

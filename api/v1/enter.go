@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"app/api/v1/system"
+	"github.com/weijianhong/igo/api/v1/system"
 )
 
 type ApiGroup struct {

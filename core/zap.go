@@ -1,10 +1,10 @@
 package core
 
 import (
-	"app/core/internal"
-	"app/global"
-	"app/utils"
 	"fmt"
+	"github.com/weijianhong/igo/core/internal"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/utils"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"os"

@@ -3,10 +3,10 @@ package initialize
 import (
 	"net/http"
 
-	"app/global"
-	"app/middleware"
-	"app/router"
 	"github.com/gin-gonic/gin"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/middleware"
+	"github.com/weijianhong/igo/router"
 )
 
 // 初始化总路由

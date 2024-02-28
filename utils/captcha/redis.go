@@ -1,8 +1,8 @@
 package captcha
 
 import (
-	"app/global"
 	"context"
+	"github.com/weijianhong/igo/global"
 	"time"
 
 	"github.com/mojocn/base64Captcha"

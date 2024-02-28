@@ -1,25 +1,25 @@
 package main
 
 import (
-	"app/core"
-	"app/global"
-	"app/initialize"
+	"fmt"
+	"github.com/weijianhong/igo/core"
+	"github.com/weijianhong/igo/global"
 )
 
 func main() {
 
 	//初始化配置
 	global.VP = core.Viper()
-	//fmt.Println(global.CONFIG)
+	fmt.Println(fmt.Sprintf("%+#v", global.CONFIG))
 
 	// 初始化log
-	global.LOG = core.Zap()
+	//global.LOG = core.Zap()
 
 	// 初始化数据库（直接调用驱动的方式）
-	initialize.DB()
+	//initialize.DB()
 
 	// 初始化gorm
-	initialize.Gorm()
+	//initialize.Gorm()
 
 	//初始化 redis
 	//initialize.Redis()
@@ -28,8 +28,8 @@ func main() {
 	//initialize.ES()
 
 	// 启动grpc服务
-	core.RunGrpcServer()
+	//core.RunGrpcServer()
 
 	// 启动http服务
-	core.RunHttpServer()
+	//core.RunHttpServer()
 }

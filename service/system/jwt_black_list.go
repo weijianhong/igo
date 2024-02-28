@@ -1,10 +1,10 @@
 package system
 
 import (
-	"app/global"
 	"context"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
 	"github.com/flipped-aurora/gin-vue-admin/server/utils"
+	"github.com/weijianhong/igo/global"
 )
 
 type JwtService struct{}

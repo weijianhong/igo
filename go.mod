@@ -1,4 +1,4 @@
-module app
+module  github.com/weijianhong/igo
 
 go 1.20
 

@@ -14,9 +14,9 @@ package middleware
 //
 //	"github.com/flipped-aurora/gin-vue-admin/server/utils"
 //
-//	"app/global"
+//	"github.com/weijianhong/igo/global"
 //	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
-//	"app/service"
+//	"github.com/weijianhong/igo/service"
 //	"github.com/gin-gonic/gin"
 //	"go.uber.org/zap"
 //)
