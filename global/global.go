@@ -9,6 +9,7 @@ import (
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"golang.org/x/sync/singleflight"
+	"gorm.io/gorm"
 )
 
 var (
@@ -22,5 +23,7 @@ var (
 
 	BlackCache local_cache.Cache
 
-	Concurrency_Control = &singleflight.Group{}
+	ConcurrencyControl = &singleflight.Group{}
+
+	DBG *gorm.DB
 )

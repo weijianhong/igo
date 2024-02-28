@@ -10,4 +10,8 @@ type Server struct {
 	Captcha Captcha       `mapstructure:"captcha" json:"captcha" yaml:"captcha"`
 	Cors    CORS          `mapstructure:"cors" json:"cors" yaml:"cors"`
 	Local   Local         `mapstructure:"local" json:"local" yaml:"local"`
+
+	Mysql  Mysql  `mapstructure:"mysql" json:"mysql" yaml:"mysql"`
+	Pgsql  Pgsql  `mapstructure:"pgsql" json:"pgsql" yaml:"pgsql"`
+	Sqlite Sqlite `mapstructure:"sqlite" json:"sqlite" yaml:"sqlite"`
 }

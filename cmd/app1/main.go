@@ -18,6 +18,9 @@ func main() {
 	// 初始化数据库（直接调用驱动的方式）
 	initialize.DB()
 
+	// 初始化gorm
+	initialize.Gorm()
+
 	//初始化 redis
 	//initialize.Redis()
 
@@ -29,5 +32,4 @@ func main() {
 
 	// 启动http服务
 	core.RunHttpServer()
-
 }
