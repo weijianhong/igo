@@ -1,4 +1,4 @@
-package system
+package base
 
 import (
 	"github.com/gin-gonic/gin"
@@ -11,14 +11,14 @@ var GroupNew = new(group)
 
 var (
 	//对硬接口
-	systemApi = v1.ApiGroupApp.ApiGroup.SystemApi
+	baseApi = v1.ApiGroupApp.ApiGroup.BaseApi
 )
 
-func (a group) Add(Router *gin.RouterGroup) {
+func (a group) Add(rg *gin.RouterGroup) {
 
-	Router.Group("system")
+	rg.Group("base")
 
-	SysRouterNew.Add(Router)
+	baseRouterNew.Add(rg)
 
 	return
 }

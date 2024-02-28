@@ -2,17 +2,16 @@ package initialize
 
 import (
 	"github.com/songzhibin97/gkit/cache/local_cache"
-
-	"github.com/flipped-aurora/gin-vue-admin/server/global"
-	"github.com/flipped-aurora/gin-vue-admin/server/utils"
+	"github.com/weijianhong/igo/global"
+	"github.com/weijianhong/igo/utils"
 )
 
 func OtherInit() {
-	dr, err := utils.ParseDuration(global.GVA_CONFIG.JWT.ExpiresTime)
+	dr, err := utils.ParseDuration(global.CONFIG.JWT.ExpiresTime)
 	if err != nil {
 		panic(err)
 	}
-	_, err = utils.ParseDuration(global.GVA_CONFIG.JWT.BufferTime)
+	_, err = utils.ParseDuration(global.CONFIG.JWT.BufferTime)
 	if err != nil {
 		panic(err)
 	}

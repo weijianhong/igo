@@ -8,7 +8,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/weijianhong/igo/global"
-	"github.com/weijianhong/igo/middleware"
 )
 
 // 初始化总路由
@@ -38,19 +37,17 @@ func Routers() *gin.Engine {
 
 	// 方便统一添加路由组前缀 多服务器上线使用
 	var WsGroup = Router.Group("ws")
+	// 健康监测
+	Router.GET("/health", func(c *gin.Context) {
+		c.JSON(http.StatusOK, "ok")
+	})
 
 	// 不做权限检查的接口
-	PublicGroup := Router.Group("")
-	{
-		// 健康监测
-		PublicGroup.GET("/health", func(c *gin.Context) {
-			c.JSON(http.StatusOK, "ok")
-		})
-	}
+	PublicGroup := Router.Group("base")
 
 	// 需要做权限验证的接口
 	PrivateGroup := Router.Group("api")
-	PrivateGroup.Use(middleware.JWTAuth())
+	//PrivateGroup.Use(middleware.JWTAuth())
 
 	// 以下为业务路基设置
 	router.GroupNew.Add(PublicGroup, PrivateGroup, WsGroup)

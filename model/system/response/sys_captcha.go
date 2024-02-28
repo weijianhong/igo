@@ -5,4 +5,5 @@ type SysCaptchaResponse struct {
 	PicPath       string `json:"picPath"`
 	CaptchaLength int    `json:"captchaLength"`
 	OpenCaptcha   bool   `json:"openCaptcha"`
+	Answer        string `json:"answer"`
 }

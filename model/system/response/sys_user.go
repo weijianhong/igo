@@ -1,11 +1,10 @@
 package response
 
-import (
-	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
-)
+import "github.com/weijianhong/igo/model/system"
 
 type SysUserResponse struct {
 	User system.SysUser `json:"user"`
+	//system.System
 }
 
 type LoginResponse struct {
