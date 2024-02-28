@@ -53,7 +53,7 @@ func Routers() *gin.Engine {
 	PrivateGroup.Use(middleware.JWTAuth())
 
 	// 以下为业务路基设置
-	router.RouterGroupApp.Add(PublicGroup, PrivateGroup, WsGroup)
+	router.GroupNew.Add(PublicGroup, PrivateGroup, WsGroup)
 
 	global.LOG.Info("router register success")
 	return Router

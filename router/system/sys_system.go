@@ -2,15 +2,14 @@ package system
 
 import (
 	"github.com/gin-gonic/gin"
-	v1 "github.com/weijianhong/igo/api/v1"
 )
 
-type SysRouter struct{}
+type sysRouter struct{}
 
-func (s *SysRouter) InitSystemRouter(Router *gin.RouterGroup) {
-	sysRouter := Router.Group("system")
-	systemApi := v1.ApiGroupApp.ApiGroup.SystemApi
-	{
-		sysRouter.POST("getSystemConfig", systemApi.GetSystemConfig) // 获取配置文件内容
-	}
+var SysRouterNew = new(sysRouter)
+
+func (s *sysRouter) Add(Router *gin.RouterGroup) {
+
+	Router.POST("getSystemConfig", systemApi.GetSystemConfig) // 获取配置文件内容
+
 }

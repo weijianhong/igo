@@ -5,19 +5,13 @@ import (
 	"github.com/weijianhong/igo/router/system"
 )
 
-type RouterGroup struct {
-	pub, pri, ws *gin.RouterGroup
-	System       system.RouterGroup
-}
+type group struct{}
 
-var RouterGroupApp = new(RouterGroup)
+var GroupNew = new(group)
 
-func (a RouterGroup) Add(pub, pri, ws *gin.RouterGroup) {
-	a.pub = pub
-	a.pri = pri
-	a.ws = ws
+func (a group) Add(pub, pri, ws *gin.RouterGroup) {
 
-	a.System.InitSystemRouter(a.pri)
+	system.GroupNew.Add(pri)
 
 	return
 }
