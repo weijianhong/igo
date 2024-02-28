@@ -6,7 +6,7 @@ import (
 
 type sysRouter struct{}
 
-var SysRouterNew = new(sysRouter)
+var sysRouterNew = new(sysRouter)
 
 func (s *sysRouter) Add(Router *gin.RouterGroup) {
 

@@ -18,7 +18,7 @@ func (a group) Add(Router *gin.RouterGroup) {
 
 	Router.Group("system")
 
-	SysRouterNew.Add(Router)
+	sysRouterNew.Add(Router)
 
 	return
 }
