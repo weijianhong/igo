@@ -19,7 +19,7 @@ db:
   password: "TFSec@2017@MYSQL"
   host: "localhost"
   port: 3306
-  dbname: "gva"
+  dbname: "igo"
   conn-max-life-time: 10
   comm-max-idle-time: 10
   max-open-conns: 1000
