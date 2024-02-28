@@ -2,6 +2,7 @@ system:
   env: local
   router-prefix: ""
   db-type: "mysql" # 支持 mysql mariadb 数据库
+  use-multipoint: false
   server: # 不支持同时开启
     http:
       is-open: true

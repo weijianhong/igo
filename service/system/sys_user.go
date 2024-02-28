@@ -63,7 +63,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 	return &user, err
 }
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: ChangePassword
 //@description: 修改用户密码
 //@param: u *model.SysUser, newPassword string
@@ -83,7 +82,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: GetUserInfoList
 //@description: 分页获取数据
 //@param: info request.PageInfo
@@ -102,7 +100,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	return userList, total, err
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: SetUserAuthority
 //@description: 设置一个用户的权限
 //@param: uuid uuid.UUID, authorityId string
@@ -117,7 +114,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	return err
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: SetUserAuthorities
 //@description: 设置一个用户的权限
 //@param: id uint, authorityIds []string
@@ -148,7 +144,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	})
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: DeleteUser
 //@description: 删除用户
 //@param: id float64
@@ -166,7 +161,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	})
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: SetUserInfo
 //@description: 设置用户信息
 //@param: reqUser model.SysUser
@@ -187,7 +181,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //		}).Error
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: SetUserInfo
 //@description: 设置用户信息
 //@param: reqUser model.SysUser
@@ -199,8 +192,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //		Updates(req).Error
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
-//@author: [SliverHorn](https://github.com/SliverHorn)
 //@function: GetUserInfo
 //@description: 获取用户信息
 //@param: uuid uuid.UUID
@@ -216,7 +207,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	return reqUser, err
 //}
 
-//@author: [SliverHorn](https://github.com/SliverHorn)
 //@function: FindUserById
 //@description: 通过id获取用户信息
 //@param: id int
@@ -228,7 +218,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	return &u, err
 //}
 
-//@author: [SliverHorn](https://github.com/SliverHorn)
 //@function: FindUserByUuid
 //@description: 通过uuid获取用户信息
 //@param: uuid string
@@ -242,7 +231,6 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 //	return &u, nil
 //}
 
-//@author: [piexlmax](https://github.com/piexlmax)
 //@function: resetPassword
 //@description: 修改用户密码
 //@param: ID uint

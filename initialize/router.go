@@ -2,6 +2,7 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/weijianhong/igo/middleware"
 	"github.com/weijianhong/igo/router"
 	"go.uber.org/zap"
 	"net/http"
@@ -47,7 +48,7 @@ func Routers() *gin.Engine {
 
 	// 需要做权限验证的接口
 	PrivateGroup := Router.Group("api")
-	//PrivateGroup.Use(middleware.JWTAuth())
+	PrivateGroup.Use(middleware.JWTAuth())
 
 	// 以下为业务路基设置
 	router.GroupNew.Add(PublicGroup, PrivateGroup, WsGroup)

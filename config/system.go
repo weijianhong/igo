@@ -12,9 +12,9 @@ type Config struct {
 }
 
 type System struct {
-	Env          string       `mapstructure:"env" json:"env" yaml:"env"`
-	Server       ServerConfig `mapstructure:"server" json:"server" yaml:"server"`
-	RouterPrefix string       `mapstructure:"router-prefix" json:"router-prefix" yaml:"router-prefix"`
-	DbType       string       `mapstructure:"db-type" json:"db-type" yaml:"db-type"` // 数据库类型:mysql(默认)|sqlite|sqlserver|postgresql
-
+	Env           string       `mapstructure:"env" json:"env" yaml:"env"`
+	Server        ServerConfig `mapstructure:"server" json:"server" yaml:"server"`
+	RouterPrefix  string       `mapstructure:"router-prefix" json:"router-prefix" yaml:"router-prefix"`
+	DbType        string       `mapstructure:"db-type" json:"db-type" yaml:"db-type"`                      // 数据库类型:mysql(默认)|sqlite|sqlserver|postgresql
+	UseMultipoint bool         `mapstructure:"use-multipoint" json:"use-multipoint" yaml:"use-multipoint"` // 多点登录拦截
 }

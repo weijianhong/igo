@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/weijianhong/igo/global"
 	"github.com/weijianhong/igo/initialize"
+	"github.com/weijianhong/igo/service/system"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
@@ -28,6 +29,11 @@ func RunHttpServer() {
 
 	address := fmt.Sprintf(":%d", httpCfg.Port)
 	server := initServer(address, router)
+
+	// 从db加载jwt数据
+	if global.DB != nil {
+		system.LoadAll()
+	}
 
 	// 保证文本顺序输出
 	// In order to ensure that the text order output can be deleted
