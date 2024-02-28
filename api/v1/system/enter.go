@@ -2,7 +2,7 @@ package system
 
 import "github.com/weijianhong/igo/service"
 
-type ApiSystemGroup struct {
+type ApiGroup struct {
 	SystemApi
 }
 
