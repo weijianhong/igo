@@ -17,7 +17,7 @@ type UserService struct{}
 func (userService *UserService) Register(u system.SysUser) (userInter system.SysUser, err error) {
 	var user system.SysUser
 	err = global.DB.QueryRowContext(context.Background(),
-		`SELECT password FROM sys_users WHERE username = ?`, u.Username).
+		`SELECT password FROM ? WHERE username = ?`, u.TableName(), u.Username).
 		Scan(&user.Password)
 	if err == nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -34,7 +34,7 @@ func (userService *UserService) Register(u system.SysUser) (userInter system.Sys
 	// 否则 附加uuid 密码hash加密 注册
 	u.Password = utils.BcryptHash(u.Password)
 	u.UUID = uuid.Must(uuid.NewV4())
-	_, err = global.DB.Exec("insert into sys_users (`username`,`password`,`uuid`) values (?,?)",
+	_, err = global.DB.Exec("insert into ? (`username`,`password`,`uuid`) values (?,?)", u.TableName(),
 		u.Username, u.Password, u.UUID)
 	if err != nil {
 		return system.SysUser{}, err
@@ -49,7 +49,7 @@ func (userService *UserService) Login(u *system.SysUser) (userInter *system.SysU
 
 	var user system.SysUser
 	err = global.DB.QueryRowContext(context.Background(),
-		`SELECT password,enable FROM sys_users WHERE username = ?`, u.Username).
+		`SELECT password,enable FROM ? WHERE username = ?`, u.TableName(), u.Username).
 		Scan(&user.Password, &user.Enable)
 	if err != nil {
 		return nil, err

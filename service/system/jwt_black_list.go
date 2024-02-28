@@ -16,7 +16,7 @@ type JwtService struct{}
 
 func (jwtService *JwtService) JsonInBlacklist(jwtList system.JwtBlacklist) (err error) {
 
-	_, err = global.DB.Exec("insert into jwt_blasklists (`jwt`) values (?)", jwtList.Jwt)
+	_, err = global.DB.Exec("insert into ? (`jwt`) values (?)", jwtList.TableName(), jwtList.Jwt)
 	if err != nil {
 		return err
 	}
@@ -63,7 +63,9 @@ func (jwtService *JwtService) SetRedisJWT(jwt string, userName string) (err erro
 func LoadAll() {
 	var data []string
 
-	rows, err := global.DB.Query("SELECT jwt FROM jwt_blasklists")
+	var jwtList system.JwtBlacklist
+
+	rows, err := global.DB.Query("SELECT jwt FROM ?", jwtList.TableName())
 	if err != nil {
 		return
 	}
