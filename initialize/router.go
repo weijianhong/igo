@@ -1,6 +1,9 @@
 package initialize
 
 import (
+	"fmt"
+	"github.com/weijianhong/igo/utils"
+	"go.uber.org/zap"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -25,15 +28,19 @@ func Routers() *gin.Engine {
 	}
 
 	systemRouter := router.RouterGroupApp.System
-	// 如果想要不使用nginx代理前端网页，可以修改 web/.env.production 下的
-	// VUE_APP_BASE_API = /
-	// VUE_APP_BASE_PATH = http://localhost
-	// 然后执行打包命令 npm run build。在打开下面3行注释
-	//Router.Static("/favicon.ico", "./dist/favicon.ico")
-	//Router.Static("/static", "./dist/static")   // dist里面的静态资源
-	//Router.StaticFile("/", "./dist/index.html") // 前端网页入口页面
 
-	Router.StaticFS(global.CONFIG.Local.StorePath, http.Dir(global.CONFIG.Local.StorePath)) // 为用户头像和文件提供静态地址
+	serverRunDir, _ := utils.GetCurrentDir()
+	serverRunDir = "."
+	global.LOG.Info("", zap.String("serverRunDir", serverRunDir))
+
+	// 静态 路由功能
+	Router.LoadHTMLGlob(fmt.Sprintf("%s/dist/*.html", serverRunDir)) // npm打包成dist的路径
+	Router.StaticFile("/favicon.ico", fmt.Sprintf("%s/dist/favicon.ico", serverRunDir))
+	Router.Static("/assets", fmt.Sprintf("%s/dist/assets", serverRunDir))   // 添加资源路径
+	Router.StaticFile("/", fmt.Sprintf("%s/dist/index.html", serverRunDir)) // 前端网页入口页面
+	// 为用户头像和文件提供静态地址
+	Router.StaticFS(global.CONFIG.Local.Path, http.Dir(global.CONFIG.Local.StorePath))
+
 	// Router.Use(middleware.LoadTls())  // 如果需要使用https 请打开此中间件 然后前往 core/server.go 将启动模式 更变为 Router.RunTLS("端口","你的cre/pem文件","你的key文件")
 	// 跨域，如需跨域可以打开下面的注释
 	// Router.Use(middleware.Cors()) // 直接放行全部跨域请求

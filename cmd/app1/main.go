@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/weijianhong/igo/core"
 	"github.com/weijianhong/igo/global"
 )
@@ -10,10 +9,9 @@ func main() {
 
 	//初始化配置
 	global.VP = core.Viper()
-	fmt.Println(fmt.Sprintf("%+#v", global.CONFIG))
 
 	// 初始化log
-	//global.LOG = core.Zap()
+	global.LOG = core.Zap()
 
 	// 初始化数据库（直接调用驱动的方式）
 	//initialize.DB()
@@ -31,5 +29,5 @@ func main() {
 	//core.RunGrpcServer()
 
 	// 启动http服务
-	//core.RunHttpServer()
+	core.RunHttpServer()
 }
